@@ -20,9 +20,8 @@ const OrderPage = () => {
         phone: '',
         email: '',
         address: '',
-        city: '',
-        
-        notes: ''
+        city: ''
+        // REMOVED: notes field
     });
 
     const [errors, setErrors] = useState({});
@@ -115,8 +114,6 @@ const OrderPage = () => {
             newErrors.phone = 'Pakistani number must start with 3 (like 3XXXXXXXXX)';
         }
         
-      
-        
         if (!orderForm.address.trim()) {
             newErrors.address = 'Address is required';
         }
@@ -125,9 +122,7 @@ const OrderPage = () => {
             newErrors.city = 'City is required';
         }
         
-        if (!agreementChecked) {
-            newErrors.agreement = 'You must agree to the terms to continue';
-        }
+        // REMOVED: agreement validation
         
         return newErrors;
     };
@@ -160,13 +155,7 @@ const OrderPage = () => {
             return;
         }
         
-        if (!agreementChecked) {
-            setErrors({
-                ...errors,
-                agreement: 'You must agree to the terms to continue'
-            });
-            return;
-        }
+        // REMOVED: agreement check
         
         setIsSubmitting(true);
 
@@ -184,7 +173,7 @@ const OrderPage = () => {
             address: orderForm.address,
             city: orderForm.city,
            
-            notes: orderForm.notes || 'No additional notes',
+            notes: 'No additional notes', // REMOVED: orderForm.notes reference
             product: productName,
             weight: `${orderData.weight}g`,
             quantity: orderData.quantity,
@@ -370,7 +359,15 @@ const OrderPage = () => {
                     </div>
                     
                     <div className="form-group">
-                       
+                        <label>Email Address (Optional)</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={orderForm.email}
+                            onChange={handleInputChange}
+                            placeholder="your.email@example.com"
+                        />
+                        <small>For order updates (optional)</small>
                     </div>
                     
                     <div className="form-group">
@@ -401,36 +398,12 @@ const OrderPage = () => {
                         </div>
                         
                         <div className="form-group">
-                           
+                            {/* Empty div for layout */}
                         </div>
                     </div>
                     
-                    <div className="form-group">
-                        <label>Additional Notes (Optional)</label>
-                        <textarea
-                            name="notes"
-                            value={orderForm.notes}
-                            onChange={handleInputChange}
-                            placeholder="Delivery instructions, special requests"
-                            rows="2"
-                        />
-                    </div>
-                    
-                    <div className="agreement-checkbox">
-                        <label className="checkbox-container">
-                            <input
-                                type="checkbox"
-                                checked={agreementChecked}
-                                onChange={handleCheckboxChange}
-                                className={errors.agreement ? 'error' : ''}
-                                required
-                            />
-                            <span className="checkbox-label">
-                                I agree that <span>Rehman PK</span> can contact me any time & I agree to their policies *
-                            </span>
-                        </label>
-                        {errors.agreement && <span className="checkbox-error">{errors.agreement}</span>}
-                    </div>
+                    {/* REMOVED: Additional Notes field */}
+                    {/* REMOVED: Agreement checkbox section */}
                     
                     <div className="form-actions">
                         <button 
@@ -444,7 +417,7 @@ const OrderPage = () => {
                         <button 
                             type="submit" 
                             className="submit-btn"
-                            disabled={isSubmitting || !agreementChecked}
+                            disabled={isSubmitting} // REMOVED: !agreementChecked condition
                         >
                             {isSubmitting ? 'Processing...' : 'Confirm Order'}
                         </button>
