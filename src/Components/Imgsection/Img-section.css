@@ -1,0 +1,37 @@
+
+/* Smaller image version */
+.img-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    
+}
+
+.img-section-container img {
+    max-width: 800px; /* Limit max width */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* For very large screens */
+@media (min-width: 1200px) {
+    .img-section-container img {
+        max-width: 900px;
+    }
+}
+
+/* Simple center */
+.img-section-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.img-section-container img {
+    max-width: 100%;
+    width: auto;
+    height: 250px;
+    display: inline-block;
+}

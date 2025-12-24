@@ -1,0 +1,15 @@
+.navbar {
+  height: 60px;
+  background-color:#333333; /* dark shade */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center logo */
+ 
+}
+
+.logo {
+  height: 100px; /* adjust as needed */
+  width: auto;
+  margin-top: 45px;
+}
+

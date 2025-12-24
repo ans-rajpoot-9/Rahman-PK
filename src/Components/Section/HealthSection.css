@@ -1,0 +1,138 @@
+/* Add this to your existing CSS - Yellow background version */
+.health-section {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+    padding: 60px 20px;
+    text-align: center;
+    color: #333; /* Changed from white to dark for yellow background */
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background pattern - adjust color for yellow background */
+.health-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23FFA000' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Main Heading - changed color for yellow background */
+.health-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+   font-weight: 800;
+   font-size: xxxxx-large;
+    border-color: black;
+    color: black; /* Dark text for yellow background */
+}
+
+/* Decorative underline */
+.health-section h1:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #2e7d32; /* Green color for contrast */
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Paragraph text - changed color for yellow background */
+.health-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 2;
+    font-weight: 100;
+    color: #444; /* Darker text for readability */
+}
+
+/* Last paragraph with emphasis */
+.health-section p:last-child {
+    font-weight: 600;
+    color: black; /* Green color */
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+/* Decorative icons */
+.health-section:after {
+    
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.health-section:before {
+    
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .health-section {
+        padding: 40px 15px;
+        margin: 30px 0;
+        border-radius: 10px;
+    }
+    
+    .health-section h1 {
+        font-size: 32px;
+    }
+    
+    .health-section p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .health-section p:last-child {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .health-section h1 {
+        font-size: 28px;
+    }
+    
+    .health-section p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .health-section p:last-child {
+        font-size: 16px;
+    }
+}
+.health-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* Extra bold */
+    font-size: 42px;
+    
+    letter-spacing: 2px;
+}

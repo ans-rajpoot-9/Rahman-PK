@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ProductPage.css */
+.product-page-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    gap: 40px;
+    background: #333333;
+    margin-top: 50px;
+}
+
+/* STICKY IMAGE COLUMN - NO SCROLLBAR */
+.left-column {
+    flex: 1.2;
+    max-width: 600px;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 80px; /* Adjust this: 80px for header, 20px for no header */
+    align-self: flex-start;
+    height: fit-content;
+}
+
+.right-column {
+    flex: 0.8;
+    padding: 20px;
+}
+
+/* Main Image Container with Touch Support */
+.main-image-container {
+    background: #333333;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+}
+
+.main-image-container:active {
+    cursor: grabbing;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slide-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slide-indicator.active {
+    background: #28a745;
+    transform: scale(1.3);
+}
+
+.slide-indicator:hover {
+    background: #28a745;
+    transform: scale(1.2);
+}
+
+/* Swipe Instruction (Only on Mobile) */
+.swipe-instruction {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: fit-content;
+    animation: fadeInOut 3s infinite;
+}
+
+.swipe-arrow {
+    font-size: 16px;
+    margin: 0 5px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    padding: 5px;
+    background: white;
+}
+
+.thumb:hover {
+    border-color: #28a745;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+}
+
+.thumb.active-thumb {
+    border: 3px solid #28a745;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Brand name */
+.brand-title {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Product title */
+.product-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* Price Section */
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.real-price {
+    font-size: 20px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.sale-price {
+    font-size: 36px;
+    color: yellow;
+    font-weight: 800;
+}
+
+.sale-price:after {
+    content: " PKR";
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.shipping-info {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Weight Selection */
+.weight-selection {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.weight-selection span {
+    padding: 12px 24px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.weight-selection span:hover {
+    border-color: #28a745;
+    background: #f8fff9;
+}
+
+.weight-selection .active {
+    border-color: #28a745;
+    background: #e8f5e9;
+    color: #28a745;
+    position: relative;
+}
+
+.weight-selection .active:after {
+    content: "✓";
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+/* Quantity Section */
+.quantity-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: fit-content;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    gap: 0px;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+.qty-btn:hover {
+    background: white;
+    color: #333;
+}
+
+.qty {
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+/* Buttons - Stacked vertically */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.buy-btn {
+    background: yellow !important;
+    color:black;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+    background: yellowgreen;
+}
+
+.whatsapp-order-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.whatsapp-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+    background: linear-gradient(135deg, #1da851 0%, #0d7a6f 100%);
+}
+
+.whatsapp-order-btn:before {
+    
+    font-size: 20px;
+}
+
+/* Product Info */
+.product-info {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    background: transparent;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.product-info li {
+    padding: 8px 0;
+    font-size: 40px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    gap: 12px;
+    font-weight: 900;
+    border-radius: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Description */
+.description {
+    margin-top: 30px;
+}
+
+.description h3 {
+    color: yellow;
+    margin: 25px 0 15px 0;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.description p {
+    color: white;
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.description li {
+    padding: 10px 0;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.description li:before {
+    content: "✓";
+    color: #28a745;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Responsive Design - Mobile Touch Features */
+@media (max-width: 992px) {
+    .product-page-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px;
+    }
+    
+    .left-column {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+    }
+    
+    .sale-price {
+        font-size: 32px;
+    }
+    
+    .product-title {
+        font-size: 28px;
+    }
+    
+    /* Show swipe instruction only on mobile */
+    .swipe-instruction {
+        display: block;
+    }
+    
+    /* Better touch area for mobile */
+    .main-image-container {
+        min-height: 400px;
+        padding: 20px;
+    }
+    
+    .thumb {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .slide-indicators {
+        bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .price-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .weight-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .weight-selection span {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .buttons {
+        max-width: 100%;
+    }
+    
+    .quantity-section {
+        width: 100%;
+        width: 320px;
+        
+        justify-content: center;
+    }
+    
+    .product-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-info li {
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .main-image-container {
+        min-height: 350px;
+        padding: 15px;
+        margin-top: 0%;
+    }
+    
+    .swipe-instruction {
+        font-size: 12px;
+        bottom: 40px;
+    }
+}
+
+
+
+
+.main-image {
+    border-radius: 10%;
+}
+
+.main-image-container {
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+
+.h1{
+   
+    font-size: medium !important;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
