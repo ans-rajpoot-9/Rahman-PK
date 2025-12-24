@@ -500,7 +500,8 @@
     
     .quantity-section {
         width: 100%;
-        width: 300px;
+        width: 260px !important;
+
         
         justify-content: center;
     }
