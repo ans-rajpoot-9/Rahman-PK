@@ -18,7 +18,7 @@ const OrderPage = () => {
     const [orderForm, setOrderForm] = useState({
         name: '',
         phone: '',
-        email: '',
+        // email: '',
         address: '',
         city: ''
         // REMOVED: notes field
@@ -359,7 +359,7 @@ const OrderPage = () => {
                     </div>
                     
                     <div className="form-group">
-                        <label>Email Address (Optional)</label>
+                        {/* <label>Email Address (Optional)</label>
                         <input
                             type="email"
                             name="email"
@@ -367,7 +367,7 @@ const OrderPage = () => {
                             onChange={handleInputChange}
                             placeholder="your.email@example.com"
                         />
-                        <small>For order updates (optional)</small>
+                        <small>For order updates (optional)</small> */}
                     </div>
                     
                     <div className="form-group">
