@@ -228,15 +228,15 @@ const ProductPage = () => {
         </div>
 
         {/* Product Info */}
-        <ul className="product-info">
+        {/* <ul className="product-info">
           <li>🌱 Herbal Product</li>
           <li>🌟 Satisfaction Guarantee</li>
           <li>🧪 Chemical Free - No Side Effect</li>
           <li>🚚 Free Home Delivery All Over Pakistan</li>
-        </ul>
+        </ul> */}
 
         {/* Description */}
-        <div className="description">
+        {/* <div className="description">
           <h3>Product Description</h3>
           <p>
             Majoon Khass is a traditional herbal preparation for men, used for centuries in Unani medicine to promote strength, energy, and vitality.
@@ -253,7 +253,7 @@ const ProductPage = () => {
             <li>Aids in Stress Relief & Mental Clarity</li>
             <li>Strengthens Immunity & Overall Health</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

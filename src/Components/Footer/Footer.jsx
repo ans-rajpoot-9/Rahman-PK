@@ -32,10 +32,10 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="footer-section">
                         <h3 className="footer-logo">REHMANPK 🌿</h3>
-                        <p className="footer-description">
+                        {/* <p className="footer-description">
                             Your trusted source for premium herbal products. 
                             100% natural, chemical-free remedies for better health and wellness.
-                        </p>
+                        </p> */}
                         <div className="social-icons">
                             <a href="#" className="social-icon"><FaFacebook /></a>
                             <a href="#" className="social-icon"><FaInstagram /></a>
@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
 
                     {/* Products */}
-                    <div className="footer-section">
+                    {/* <div className="footer-section">
                         <h3>Our Products</h3>
                         <ul className="footer-links">
                             <li><a href="/product/majoon-khass">Majoon-E-Khass</a></li>
@@ -67,7 +67,7 @@ const Footer = () => {
                             <li><a href="/products">Immunity Boosters</a></li>
                             <li><a href="/products">Energy & Stamina</a></li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     {/* Contact Info */}
                     <div className="footer-section">
@@ -97,10 +97,10 @@ const Footer = () => {
             {/* Bottom Section */}
             <div className="footer-bottom">
                 <div className="footer-container">
-                    <p className="copyright">
+                    {/* <p className="copyright">
                         © {new Date().getFullYear()} REHMANPK. All rights reserved. | 
                         Herbal Products | Natural Remedies | Traditional Medicine
-                    </p>
+                    </p> */}
                     <p className="disclaimer">
                         *These statements have not been evaluated by the Drug Regulatory Authority of Pakistan. 
                         Products are not intended to diagnose, treat, cure, or prevent any disease.
