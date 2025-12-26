@@ -3,8 +3,8 @@ import "./Productpage.css";
 import { useNavigate } from 'react-router-dom';
 
 // Import your product images
-import product250 from "../../Assets/1.webp";
-import product120 from "../../Assets/2.webp";
+import product250 from "../../Assets/bari majoon-e-khas.png";
+import product120 from "../../Assets/choti majoon-e-khas.png";
 import thumb1 from "../../Assets/1.webp";
 import thumb2 from "../../Assets/2.webp";
 import thumb3 from "../../Assets/1.webp";
