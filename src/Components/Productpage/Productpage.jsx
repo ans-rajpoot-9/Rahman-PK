@@ -7,7 +7,7 @@ import product250 from "../../Assets/bari majoon-e-khas.png";
 import product120 from "../../Assets/choti majoon-e-khas.png";
 import thumb1 from "../../Assets/1.webp";
 import thumb2 from "../../Assets/2.webp";
-import thumb3 from "../../Assets/1.webp";
+// import thumb3 from "../../Assets/1.webp";
 
 const ProductPage = () => {
   const [selectedWeight, setSelectedWeight] = useState("250");
@@ -19,10 +19,10 @@ const ProductPage = () => {
   
   const mainImageRef = useRef(null);
   const navigate = useNavigate();
-  
-  const images = [product250, product120, product250];
-  const thumbnails = [thumb1, thumb2, thumb3];
-
+  // product250
+  const images = [product250, product120];
+  const thumbnails = [thumb1, thumb2];    
+  // thumb3
   const prices = {
     "250": { real: 4000, sale: 2500 },
     "120": { real: 3000, sale: 2000 },
@@ -179,7 +179,7 @@ const ProductPage = () => {
       <div className="right-column">
         <h1 className="brand-title">REHMANPK</h1>
         <h2 className="product-title">Special Deal Offer ✅</h2>
-        <h1>Majoon-E-Khas</h1>
+        {/* <h1>Majoon-E-Khas</h1> */}
 
         {/* Price */}
         <div className="price-section">
