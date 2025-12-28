@@ -7,7 +7,7 @@ import product250 from "../../Assets/1.webp";
 import product120 from "../../Assets/2.webp";
 import thumb1 from "../../Assets/1.webp";
 import thumb2 from "../../Assets/2.webp";
-import thumb3 from "../../Assets/1.webp";
+// import thumb3 from "../../Assets/1.webp";
 
 const ProductPage = () => {
   const [selectedWeight, setSelectedWeight] = useState("250");
@@ -20,8 +20,8 @@ const ProductPage = () => {
   const mainImageRef = useRef(null);
   const navigate = useNavigate();
  
-  const images = [product250, product120, product250];
-  const thumbnails = [thumb1, thumb2, thumb3];    
+  const images = [product250, product120];
+  const thumbnails = [thumb1, thumb2];    
 
   const prices = {
     "250": { real: 4000, sale: 2500 },
